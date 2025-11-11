@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block titulo %} Página detalle de post {% endblock %}
+
+{% block contenido %}
+    <h1>{{entrada.titulo}}</h1>
+    <p> - Autor: {{entrada.autor}}</p>
+    <p> - - Cuerpo: {{entrada.cuerpo}}</p>
+    <p><a href="{% url 'inicio' %}">Volver al blog principal</a></p>
+{% endblock %}

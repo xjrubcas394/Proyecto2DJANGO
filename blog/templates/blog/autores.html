@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block titulo %} Página de autores {% endblock %}
+
+{% block contenido %}
+    <h1>Lista de autores</h1>
+    {% for autor in autores %}
+    <li>- - Autor: <a href="{% url 'autor_post' autor_pk=autor.pk %}">{{autor.nombre}}</a></li>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block titulo %} Página de post de autor {% endblock %}
+
+{% block contenido %}
+    <h1>Entradas del autor {{autor}}</h1>
+    <ul>
+    {% for entrada in entrada %}
+    <li> - - Titulo: <a href="{% url 'detalle_post' pk=entrada.pk %}">{{entrada.titulo}}</a></li>
+    {% endfor %}
+    </ul>
+    <p><a href="{% url 'inicio' %}">Volver al blog principal</a></p>
+{% endblock %}
