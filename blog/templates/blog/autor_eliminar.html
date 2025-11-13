@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block contenido %}
+    <h1>Eliminar Autor</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>¿Desea eliminar el autor {{autor}}?</p>
+        <input type="submit" value="Eliminar" class="boton">
+        <a href="{% url 'autores' %}" class="boton">Volver<a></p>
+        
+        
+    </form>
+{% endblock %}

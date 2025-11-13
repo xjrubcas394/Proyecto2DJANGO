@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block contenido %}
+
+    {% if estado == 'crear' %}
+        <h1>Nuevo Autor</h1>
+    {% else %}
+        <h1>Editar Autor</h1>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Enviar">
+        
+        <a href="{% url 'autores' %}">Volver</a>
+    </form>
+
+{% endblock %}

@@ -9,5 +9,5 @@
     <li> - - Titulo: <a href="{% url 'detalle_post' pk=entrada.pk %}">{{entrada.titulo}}</a></li>
     {% endfor %}
     </ul>
-    <p><a href="{% url 'inicio' %}">Volver al blog principal</a></p>
+    <p><a href="{% url 'inicio' %}" class="boton">Volver al blog principal</a></p>
 {% endblock %}

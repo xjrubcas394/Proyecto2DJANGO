@@ -5,6 +5,9 @@
 {% block contenido %}
     <h1>Lista de autores</h1>
     {% for autor in autores %}
-    <li>- - Autor: <a href="{% url 'autor_post' autor_pk=autor.pk %}">{{autor.nombre}}</a></li>
+        
+    <li>- - Autor: <a href="{% url 'autor_post' autor_pk=autor.pk %}">{{autor.nombre}}</a> - - - <a href="{% url 'autor_editar' pk=autor.pk %}">Editar autor</a> - - - <a href="{% url 'autor_eliminar' pk=autor.pk %}">Borrar Autor</a></li>
     {% endfor %}
+    <br>
+    <a href="{% url 'autor_nuevo' %}" class="boton">Crear nuevo autor</a>
 {% endblock %}
